@@ -38,3 +38,9 @@ Route::get('/about', function(){
 Route::get('/articles/{id}', function($id){
     return "Ini adalah halaman Artikel dengan ID:" . $id;
 });
+
+Route::get('/hello', [WelcomeController::class, 'hello']);
+
+Route::get('/home', function(){
+    return view('home');
+});
